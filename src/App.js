@@ -74,7 +74,11 @@ export default function App() {
       <br />
       <img
         data-test-id="meme-image"
-        src={`https://api.memegen.link/images/${memeTemplate}/_${topText}/${bottomText}.png`}
+        src={
+          topText
+            ? `https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}.png`
+            : `https://api.memegen.link/images/${memeTemplate}/${bottomText}.png`
+        }
         alt="meme"
       />
     </div>
