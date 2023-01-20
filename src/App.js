@@ -27,32 +27,37 @@ export default function App() {
       <hi>Meme Generator</hi>
       <br />
       <br />
-      <label>topText</label>
-      <input
-        type="text"
-        className="input"
-        name="topText"
-        placeholder="Top Text"
-        value={topText}
-        onChange={(e) => handleTopChange(e.target.value)}
-      />
-      <label>bottomText</label>
-      <input
-        type="text"
-        className="input"
-        name="bottomText"
-        placeholder="Bottom Text"
-        value={bottomText}
-        onChange={(e) => handleBottomChange(e.target.value)}
-      />
 
-      <label>Meme template</label>
-      <input
-        type="text"
-        className="input"
-        placeholder="Meme Template"
-        onChange={(e) => handleMemeTemplateChange(e.target.value)}
-      />
+      <label>
+        topText
+        <input
+          className="input"
+          name="topText"
+          placeholder="Top Text"
+          value={topText}
+          onChange={(e) => handleTopChange(e.target.value)}
+        />
+      </label>
+
+      <label>
+        bottomText
+        <input
+          className="input"
+          name="bottomText"
+          placeholder="Bottom Text"
+          value={bottomText}
+          onChange={(e) => handleBottomChange(e.target.value)}
+        />
+      </label>
+
+      <label>
+        Meme template
+        <input
+          className="input"
+          placeholder="Meme Template"
+          onChange={(e) => handleMemeTemplateChange(e.target.value)}
+        />
+      </label>
 
       <button
         onClick={() =>
