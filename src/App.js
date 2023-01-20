@@ -33,7 +33,7 @@ export default function App() {
         <input
           className="input"
           name="topText"
-          placeholder="Top Text"
+          placeholder="top Text"
           value={topText}
           onChange={(e) => handleTopChange(e.target.value)}
         />
@@ -44,7 +44,7 @@ export default function App() {
         <input
           className="input"
           name="bottomText"
-          placeholder="Bottom Text"
+          placeholder="bottom Text"
           value={bottomText}
           onChange={(e) => handleBottomChange(e.target.value)}
         />
@@ -54,7 +54,7 @@ export default function App() {
         Meme template
         <input
           className="input"
-          placeholder="Meme Template"
+          placeholder="meme Template"
           onChange={(e) => handleMemeTemplateChange(e.target.value)}
         />
       </label>
