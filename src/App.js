@@ -31,6 +31,8 @@ export default function App() {
       <label>
         topText
         <input
+          // eslint-disable-next-line react/no-unknown-property
+          text="Top text"
           className="input"
           name="topText"
           placeholder="top Text"
