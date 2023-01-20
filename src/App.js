@@ -40,7 +40,7 @@ export default function App() {
       </label>
 
       <label>
-        bottomText
+        Bottom text
         <input
           className="input"
           name="bottomText"
