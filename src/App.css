@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(66, 165, 132);
+  background-color: #c9a30f;
   margin: 20px;
   margin-left: 150px;
   margin-right: 150px;
@@ -7,7 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  border: 20px solid rgb(246, 24, 24);
+  border: 5px solid #2f4858;
   border-style: inset;
   width: 80%;
   height: 120vh;
@@ -25,17 +25,17 @@ body {
 }
 
 .input {
-  padding: 20px;
-  color: rgb(246, 24, 24);
+  padding: 10px;
+  color: #857140;
   border-radius: 20%;
-  background-color: rgb(21, 27, 25);
+  background-color: #ffefca;
   margin-top: -50%;
 }
 
 .button {
   border-radius: 20px;
   padding: 2%;
-  color: 20px solid blueviolet;
+  color: 20px solid #789f32;
   display: block;
   margin-left: auto;
   margin-right: auto;

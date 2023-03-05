@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import { saveAs } from 'file-saver';
 import React, { useState } from 'react';
@@ -22,6 +21,16 @@ export default function App() {
   function handleMemeTemplateChange(e) {
     setMemeTemplate(e);
   }
+
+  const memeUrl = (memes, top, bottom) => {
+    return !top && !bottom
+      ? `https://api.memegen.link/images/${memes}.png`
+      : !bottom
+      ? `https://api.memegen.link/images/${memes}/${top}.png`
+      : !top
+      ? `https://api.memegen.link/images/${memes}/_/${bottom}.png`
+      : `https://api.memegen.link/images/${memes}/${top}/${bottom}.png`;
+  };
 
   return (
     <div>
@@ -66,6 +75,21 @@ export default function App() {
       <br />
       <br />
       {/* Creating a download button and using the file-saver package to save the images */}
+
+      <br />
+      <br />
+      <br />
+
+      {/* An image element containing the memes link and also an ternary declaration */}
+
+      <img
+        className="img"
+        data-test-id="meme-image"
+        src={memeUrl(memeTemplate, topText, bottomText)}
+        alt="meme"
+      />
+      <br />
+      <br />
       <button
         className="button"
         onClick={() =>
@@ -77,21 +101,6 @@ export default function App() {
       >
         Download
       </button>
-      <br />
-      <br />
-      <br />
-
-      {/* An image element containing the memes link and also an ternary declaration */}
-      <img
-        className="img"
-        data-test-id="meme-image"
-        src={
-          topText
-            ? `https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}.png`
-            : `https://api.memegen.link/images/${memeTemplate}/${bottomText}.png`
-        }
-        alt="meme"
-      />
     </div>
   );
 }
